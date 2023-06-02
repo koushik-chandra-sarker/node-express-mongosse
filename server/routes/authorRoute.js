@@ -2,11 +2,6 @@ var express = require('express');
 const Author = require('../models/author');
 var router = express.Router();
 
-router.get('/seeding',function(req, res, next) {
-    // get data form initialData.json or get data from 3rd party api.
-    // insert data into db
-});
-
 
 router.get('/get-all', function(req, res, next) {
 

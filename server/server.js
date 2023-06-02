@@ -5,7 +5,8 @@ var express = require('express');
 // var path = require('path');
 
 var indexRouter = require('./routes/index');
-var authodRouter = require('./routes/authorRoute');
+var authorRouter = require('./routes/authorRoute');
+var seedRoute = require('./routes/seeding');
 
 var app = express();
 
@@ -16,7 +17,8 @@ var app = express();
 app.use(express.json());
 
 app.use('/test', indexRouter);
-app.use('/author', authodRouter);
+app.use('/author', authorRouter);
+app.use('/seed', seedRoute);
 
 // catch 404 and forward to error handler
 // app.use(function(req, res, next) {
